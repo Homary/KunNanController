@@ -23,6 +23,7 @@
 	},
 	"homepage": "https://github.com/Homary/KunNanController#readme",
 	"devDependencies": {
+		"@types/node": "^10.12.18",
 		"autoprefixer": "^9.4.3",
 		"css-loader": "^2.0.2",
 		"extract-text-webpack-plugin": "^4.0.0-beta.0",

@@ -5,5 +5,5 @@ module.exports = {
     port: 8080,
     inline: true,
     disableHostCheck: true,
-    index: 'index.html',
+    index: 'index.html'
 }

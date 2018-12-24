@@ -1,14 +1,12 @@
 <template>
-<h3>{{msg}}</h3>
+	<router-view></router-view>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
-import { Component } from 'vue-property-decorator';
 
-@Component
 export default class App extends Vue{
-	msg: string = 'HelloWorld'
+	name: string = 'app'
 }
 </script>
 

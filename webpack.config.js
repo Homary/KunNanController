@@ -77,7 +77,7 @@ let config = {
             '@src': path.resolve(__dirname, 'src'),
             'vue$': 'vue/dist/vue.esm.js'
         },
-        extensions: ['.ts', '.vue', '.json', '.less', '.css', '.js']
+        extensions: ['.ts', '.json', '.less', '.css', '.js']
     },
     plugins: [
         new HtmlWebpackPlugin({
@@ -101,11 +101,13 @@ let config = {
     ],
     optimization: {
         splitChunks: {
-            chunks: 'all',
-            name: 'vendor'
-        },
-        runtimeChunk: {
-            name: 'runtime'
+            cacheGroups: {
+                commons: {
+                    name: 'vendor',
+                    chunks: 'all',
+                    minChunks: 2
+                }   
+            }
         }
     },
     devServer: devServer

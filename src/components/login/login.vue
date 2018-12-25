@@ -3,7 +3,7 @@
 	<h3>{{login_title}}</h3>
 	<div class="form">
 		<label for="user">账号<input type="text" id="user" /></label>
-		<label for="password">密码<input type="password" id="password" /></label>
+		<label for="password" >密码<input type="password" id="password" /></label>
 		<button><router-link to="main">登陆</router-link></button>
 	</div>
 </section>

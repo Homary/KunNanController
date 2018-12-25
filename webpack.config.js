@@ -5,6 +5,9 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const Autoprefixer = require('autoprefixer');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const devServer = require('./webpack.server');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+
+const SERVER_PATH = 'src/static/js/server.config.js';
 
 let config = {
 	entry: {
@@ -98,7 +101,11 @@ let config = {
         }),
         Autoprefixer,
         new ExtractTextPlugin('[name].css'),
-        new VueLoaderPlugin()
+        new VueLoaderPlugin(),
+        new CopyWebpackPlugin([{
+            from: path.resolve(__dirname, SERVER_PATH),
+            toType: 'file'
+        }])
     ],
     optimization: {
         splitChunks: {
@@ -111,7 +118,10 @@ let config = {
             }
         }
     },
-    devServer: devServer
+    devServer: devServer,
+    externals: {
+        _config: 'server'
+    }
 }
 
 module.exports = config;

@@ -4,13 +4,12 @@ import Login from '@components/login/login.vue';
 
 Vue.use(VueRouter);
 
-const Main = (r: any) => 
-	(require as any).ensure([], r(require('@components/main/main.vue')), 'Main');
-const DataAnalysis = (r: any) => 
-	(require as any).ensure([], r(require('@components/dataAnalysis/dataAnalysis.vue')), 'Main');
+const Main = () => import(/* webpackChunkName: "main" */ './components/main/main.vue');
+const DataAnalysis = () => import(/* webpackChunkName: "dataAnalysis" */ './components/dataAnalysis/dataAnalysis.vue');
 
 export default new VueRouter({
 	mode: 'history',
+	// base: '/build/',
 	routes: [
 		{
 			path: '/',

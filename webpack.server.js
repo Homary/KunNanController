@@ -5,5 +5,7 @@ module.exports = {
     port: 8080,
     inline: true,
     disableHostCheck: true,
-    index: 'index.html'
+    historyApiFallback: true,
+    index: 'index.html',
+    host: '0.0.0.0' // 允许外部访问
 }

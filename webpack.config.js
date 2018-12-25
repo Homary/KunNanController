@@ -8,7 +8,8 @@ const devServer = require('./webpack.server');
 
 let config = {
 	entry: {
-		index: './src/index.ts'
+		index: './src/index.ts',
+        vendor: ['vue', 'vue-router', 'vue-class-component']
 	},
 	output: {
 		path: path.join(__dirname, '/build'),

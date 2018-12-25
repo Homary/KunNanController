@@ -4,10 +4,13 @@ import Login from '@components/login/login.vue';
 
 Vue.use(VueRouter);
 
-import Main from '@components/main/main.vue';
-import DataAnalysis from '@components/dataAnalysis/dataAnalysis.vue';
+const Main = (r: any) => 
+	(require as any).ensure([], r(require('@components/main/main.vue')), 'Main');
+const DataAnalysis = (r: any) => 
+	(require as any).ensure([], r(require('@components/dataAnalysis/dataAnalysis.vue')), 'Main');
 
 export default new VueRouter({
+	mode: 'history',
 	routes: [
 		{
 			path: '/',

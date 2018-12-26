@@ -1,11 +1,11 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import Login from '@components/login/login.vue';
+import Login from '@views/login/login.vue';
 
 Vue.use(VueRouter);
 
-const Main = () => import(/* webpackChunkName: "main" */ './components/main/main.vue');
-const DataAnalysis = () => import(/* webpackChunkName: "dataAnalysis" */ './components/dataAnalysis/dataAnalysis.vue');
+const Main = () => import(/* webpackChunkName: "main" */ './views/main/main.vue');
+const DataAnalysis = () => import(/* webpackChunkName: "dataAnalysis" */ './views/dataAnalysis/dataAnalysis.vue');
 
 export default new VueRouter({
 	mode: 'history',
@@ -13,6 +13,7 @@ export default new VueRouter({
 	routes: [
 		{
 			path: '/',
+			name: 'login',
 			component: Login
 		},
 		{

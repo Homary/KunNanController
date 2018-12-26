@@ -76,9 +76,7 @@ let config = {
 	resolve: {
         alias: {
             '@static': path.resolve(__dirname, 'src/static'),
-            '@api': path.resolve(__dirname, 'src/api'),
-            '@components': path.resolve(__dirname, 'src/components'),
-            '@src': path.resolve(__dirname, 'src'),
+            '@views': path.resolve(__dirname, 'src/views'),
             'vue$': 'vue/dist/vue.esm.js'
         },
         extensions: ['.ts', '.json', '.less', '.css', '.js']

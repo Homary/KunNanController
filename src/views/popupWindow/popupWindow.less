@@ -1,0 +1,133 @@
+@borderColor: #4089BB;
+@titleColor: #4EA3D6;
+@topBgColor: #143246;
+@mainBgColor: #08141E;
+@fontSize: 20px;
+
+.popup-box{
+	position: absolute;
+	top: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	background: rgba(128, 128, 128, .5);
+	.popup-main-wrapper{
+		display: flex;
+		flex-direction: column;
+		width: 60%;
+		height: 60%;
+		border: 1px solid @borderColor;
+		z-index: 999;
+		.top{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			height: 45px;
+			padding: 0 10px;
+			color: @titleColor;
+			background: @topBgColor;
+			.top-title{
+				font-size: @fontSize;
+				font-weight: bold;
+			}
+		}
+		.popup-main{
+			display: flex;
+			flex-direction: column;
+			flex: 1 1 80%;
+			padding: 10px;
+			color: @titleColor;
+			background: @mainBgColor;
+			.popup-item-common{
+				width: 100%;
+				flex: 1 1 50%;
+				border: 1px solid @borderColor;
+			}
+			.popup-sub-title{
+				width: 15%;
+				text-align: center;
+				font-size: @fontSize;
+				font-weight: bold;
+				background: @mainBgColor;
+				transform: translate(15px, -50%);
+			}
+			.people-info{
+				.popup-item-common();
+				margin-top: 10px;
+				.section-grid{
+					display: grid;
+					grid-template-columns: repeat(2, 1fr);
+					grid-auto-rows: repeat(3, 1fr);
+					grid-row-gap: 15px;
+					padding: 2% 0 0 10%;
+					line-height: 20px;
+					color: #FFF;
+					.section-item-box{
+						height: 30px;
+						line-height: 30px;
+						.grid-item-tag{
+							display: inline-block;
+							height: 30px;
+							width: 70px;
+							text-align: justify;
+							overflow: hidden;
+							&:after{
+								content: ".";
+								display: inline-block;
+								width: 100%;
+								height: 0;
+								overflow: hidden;
+							}
+						}
+						.value-first:first-letter{
+							color: #FFF;
+						}
+					}	
+				}
+			}
+			.other-info{
+				.popup-item-common();
+				.other-info-content{
+					display: flex;
+					justify-content: space-around;
+					align-items: top;
+					height: 180px;
+					img{
+						width: 130px;
+						height: 150px;
+					}
+					.img-title{
+						margin-top: 10px;
+						color: #FFF;
+						text-align: center;
+					}
+					.other-info-right{
+						align-self: center;
+						margin-top: -20px;
+						li{
+							height: 40px;
+							line-height: 40px;
+							color: #FFF;
+							.other-info-right-item{
+								display: inline-block;
+								height: 100%;
+								width: 70px;
+								text-align: justify;
+								overflow: hidden;
+								&:after{
+									content: '.';
+									display: inline-block;
+									width: 100%;
+									height: 0;
+									overflow: hidden;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

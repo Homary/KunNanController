@@ -1,7 +1,4 @@
-@borderColor: #4089BB;
-@titleColor: #4EA3D6;
-@topBgColor: rgba(20,50,70, .4);
-@mainBgColor: rgba(8,20,30, .3);
+@import '~@/style/base';
 
 .wrapper{
 	position: relative;
@@ -71,7 +68,21 @@
 				grid-gap: 15px;
 				height: 280px;
 				padding: 20px;
-				overflow: scroll;
+				overflow-y: scroll;
+				&::-webkit-scrollbar {/*滚动条整体样式*/
+			        width: 10px;     /*高宽分别对应横竖滚动条的尺寸*/
+			        height: 1px;
+			    }
+				&::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+			        border-radius: 10px;
+			         -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+			        background: @borderColor;
+			    }
+				&::-webkit-scrollbar-track {/*滚动条里面轨道*/
+			        -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+			        border-radius: 10px;
+			        background: transparent;
+			    }
 				.section-content-item{
 					display: flex;
 					flex-wrap: nowrap;
@@ -79,7 +90,7 @@
 					background: #FFF;
 					img{
 						width: 60%;
-						height: 130px;
+						height: 100%;
 						margin-left: 5px;
 					}
 					.item-left{
@@ -103,5 +114,20 @@
 				}
 			}
 		}	
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	#section{
+		width: 60%;
+	}
+	#section-content{
+		height: 20em;
+	}
+}
+@media screen and (min-width: 1900px) {
+	#section-content{
+		height: 40em;
+		grid-template-rows: repeat(2, 220px);
 	}
 }

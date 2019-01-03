@@ -1,5 +1,5 @@
 import {Vue, Component, Emit, Prop, Watch} from 'vue-property-decorator';
-import Http from '../../static/js/http';
+import Http from '@/utils/http';
 
 @Component
 export default class PopupWindow extends Vue{

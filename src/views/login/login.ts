@@ -1,10 +1,6 @@
 import Vue from 'vue';
 import { Component } from 'vue-property-decorator';
-
-interface FormData{
-	user: string;
-	password: string;
-}
+import Http from '@/utils/http';
 
 @Component
 export default class App extends Vue{
@@ -13,11 +9,14 @@ export default class App extends Vue{
 	pwd: string = '';
 
 	setForm(){
-		let _form: FormData = {
-			user: this.admin,
-			password: this.pwd
-		};
-
-		this.$router.push({path: '/main'})
+		Http.sendLogin(this.pwd)
+			.then(data => {
+				if(data.errorcode === Http.OK){
+					this.$router.push({path: '/main'});
+					return;
+				}else{
+					alert('账号/密码错误');
+				}
+			})
 	}
 }

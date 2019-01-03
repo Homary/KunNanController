@@ -1,6 +1,6 @@
 <template>
 <div class="popup-box">
-	<div class="popup-main-wrapper">
+	<div class="popup-main-wrapper" id="popup-main-wrapper">
 		<div class="top">
 			<span class="top-title">重点人员</span>
 			<span style="font-size: 200%" @click="closePupup">&times;</span>
@@ -71,10 +71,10 @@
 </div>
 </template>
 
-<script src="./popupWindow.ts" lang="ts">
+<script src="./popupWindow.ts">
 
 </script>
 
-<style src="./popupWindow.less" lang="less">
+<style src="./popupWindow.less">
 
 </style>

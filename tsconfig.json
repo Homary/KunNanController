@@ -15,10 +15,18 @@
 		"lib": [
 			"dom",
 			"es5",
-			"es2015.promise"
+			"es2015.promise",
+			"scripthost"
 		],
 		"sourceMap": true,
 		"pretty": true,
-		"baseUrl": "./"
+		"strictFunctionTypes": false,
+		"importHelpers": true,
+		"baseUrl": ".",
+		"paths": {
+			"@/*": [
+				"src/*"
+			]
+		}
 	}
 }

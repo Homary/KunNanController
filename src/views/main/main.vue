@@ -15,14 +15,18 @@
 		</header>
 		<nav class="nav">
 			<ul class="nav-box">
-				<li class="nav-item" @click="active=init=false" :class="{'is-active': !active&&!init}">
+				<li class="nav-item" 
+					@click="() => {active=init=false;toggleSystem('数据研判')}" 
+					:class="{'is-active': !active&&!init}">
 					<router-link to="data-analysis">
 						<img src="./img/数据研判图标.png" alt="" v-if="active || init">
 						<img src="./img/数据研判.png" alt="" v-else>
 						<h6>数据研判</h6>
 					</router-link>
 				</li>
-				<li class="nav-item" :class="{'is-active': active}" @click="() => {active=true; init=false}">
+				<li class="nav-item" 
+					:class="{'is-active': active}" 
+					@click="() => {active=true; init=false; toggleSystem('运行态势')}">
 					<img src="./img/运行态势.png" alt="" v-if="!active">
 					<img src="./img/运行态势图标.png" alt="" v-else>
 					<h6>运行态势</h6>

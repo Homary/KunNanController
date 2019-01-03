@@ -11,7 +11,7 @@ export default class App extends Vue{
 </script>
 
 <style lang="less">
-@import '~@static/less/reset';
+@import '~@/style/reset';
 
 html, body{
 	width: 100%;

@@ -7,7 +7,7 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const devServer = require('./webpack.server');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
-const SERVER_PATH = 'src/static/js/server.config.js';
+const SERVER_PATH = 'src/server.config.js';
 
 let config = {
 	entry: {
@@ -75,9 +75,7 @@ let config = {
 	},
 	resolve: {
         alias: {
-            '@static': path.resolve(__dirname, 'src/static'),
-            '@views': path.resolve(__dirname, 'src/views'),
-            'vue$': 'vue/dist/vue.esm.js'
+            '@': path.resolve(__dirname, 'src/')
         },
         extensions: ['.ts', '.json', '.less', '.css', '.js']
     },

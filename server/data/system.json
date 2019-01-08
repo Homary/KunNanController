@@ -1,0 +1,94 @@
+[{
+	"id": 1,
+	"name": "运行态势",
+	"iconUrl": "icon/ic_index_platform.png",
+	"instruction": {
+		"target": [],
+		"action": "switch_theme",
+		"params": {
+			"projectId": 78,
+			"themeId": 248
+		}
+	},
+	"routingkey": "GXX:VISION",
+	"subSystem": [{
+		"id": 1,
+		"name": "恢复初始展示状态",
+		"iconUrl": "",
+		"instruction": {},
+		"routingkey": "GXX:VISION",
+		"subSystem": [{
+			"id": 1,
+			"name": "恢复",
+			"iconUrl": "",
+			"instruction": {
+				"target": [],
+				"action": "init_theme",
+				"params": {}
+			},
+			"routingkey": "GXX:VISION"
+		}]
+	}]
+}, {
+	"id": 2,
+	"name": "数据研判",
+	"iconUrl": "icon/ic_index_supervision.png",
+	"instruction": {
+		"target": [],
+		"action": "switch_theme",
+		"params": {
+			"projectId": 78,
+			"themeId": 251
+		}
+	},
+	"routingkey": "GXX:VISION",
+	"subSystem": [{
+		"id": 1,
+		"name": "恢复初始展示状态",
+		"iconUrl": "",
+		"instruction": {},
+		"routingkey": "GXX:VISION",
+		"subSystem": [{
+			"id": 1,
+			"name": "恢复",
+			"iconUrl": "",
+			"instruction": {
+				"target": "",
+				"action": "init_theme",
+				"params": {}
+			},
+			"routingkey": "GXX:VISION"
+		}]
+	}, {
+		"id": 2,
+		"name": "重点人员",
+		"iconUrl": "",
+		"instruction": {},
+		"routingkey": "GXX:VISION",
+		"subSystem": [{
+			"id": 1,
+			"name": "开启",
+			"iconUrl": "",
+			"instruction": {
+				"target": [],
+				"action": "popup",
+				"params": {
+
+				}
+			},
+			"routingkey": "GXX:VISION"
+		}, {
+			"id": 2,
+			"name": "关闭",
+			"iconUrl": "",
+			"instruction": {
+				"target": [],
+				"action": "popup_off",
+				"params": {
+
+				}
+			},
+			"routingkey": "GXX:VISION"
+		}]
+	}]
+}]

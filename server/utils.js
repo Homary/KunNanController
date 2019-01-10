@@ -1,4 +1,5 @@
 const fs = require('fs');
+const EventEmitter = require('events');
 
 function read(path) {
 	return new Promise((resolve, reject) => {
@@ -9,6 +10,12 @@ function read(path) {
 	})
 }
 
+class EventBus extends EventEmitter{};
+
+let eventBus = new EventBus();
+
 module.exports = {
-	read
+	read,
+	eventBus
 }
+

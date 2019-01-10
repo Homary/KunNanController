@@ -10,6 +10,12 @@ npm run dev
 ```
 // 生产模式  
 npm run build
+```  
+
+> 启动服务器,默认端口为9090  
+
+```  
+npm run server [port]
 ```
 
 #### 2018-12-24  
@@ -29,3 +35,12 @@ npm run build
 └── *.vue
 ```
 - 移除`api`文件夹,负责`http`请求的函数统一封装到`static/js`下的`http.ts`里  
+
+#### 2019-01-03  
+- 调整目录结构  
+├── style/  样式  
+├── utils/  工具  
+├── views/  页面  
+
+#### 2019-01-09  
+- 添加`Node`后台  

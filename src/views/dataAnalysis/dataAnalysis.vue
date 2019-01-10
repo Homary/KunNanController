@@ -23,10 +23,10 @@
 						<li>{{item.personName}}</li>
 						<li>性别</li>
 						<li>{{item.personSex}}</li>
-						<li>告警等级</li>
-						<li>{{item.warnLevel}}</li>
+						<li v-show="false">告警等级</li>
+						<li v-show="false">{{item.warnLevel}}</li>
 					</ul>
-					<h5 class="item-center-title">在逃人员</h5>
+					<h5 class="item-center-title">{{item.repoName}}</h5>
 				</div>
 			</div>
 		</section>

@@ -75,6 +75,6 @@
 
 </script>
 
-<style src="./popupWindow.less">
+<style src="./popupWindow.less" lang="less">
 
 </style>

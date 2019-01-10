@@ -15,6 +15,7 @@ module.exports = {
 	        '/icon/*',
 	        '/instruction/*'
 	    ],
-	    target: 'http://192.168.31.99:9020'
+	    //target: 'http://192.168.31.99:9020'
+        target: '192.168.31.65:9090'
 	}]
 }

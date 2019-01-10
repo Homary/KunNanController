@@ -16,7 +16,7 @@ class List{
     }
 
     '/instruction/sendSysInstruction' (res, path, params, method){
-        require('./handles/')(res, params, method);
+        require('./handles/instruction')(res, params, method);
     }
 }
 

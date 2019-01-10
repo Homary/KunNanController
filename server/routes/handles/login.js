@@ -1,4 +1,5 @@
 const utils = require('../../utils');
+const path = require('path');
 
 module.exports = function(res, path, params, method) {
 	if(method !== 'POST'){
@@ -27,7 +28,7 @@ module.exports = function(res, path, params, method) {
 	}
 }
 
-const userInfoPath = './data/user.json';
+const userInfoPath = path.resolve(__dirname, '../../data/user.json');
 
 async function checkUser(user) {
 	let data = await utils.read(userInfoPath),

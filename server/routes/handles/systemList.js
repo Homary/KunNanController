@@ -1,3 +1,4 @@
+const path = require('path');
 const utils = require('../../utils');
 
 module.exports = function(res) {
@@ -26,7 +27,7 @@ module.exports = function(res) {
 	})
 }
 
-const systemPath = './data/system.json';
+const systemPath = path.resolve(__dirname, '../../data/system.json');
 
 async function getSystemList() {
 	let data = await utils.read(systemPath);

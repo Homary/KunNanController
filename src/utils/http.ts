@@ -10,6 +10,13 @@ let ipInterface = {
 	sendSysInstruction: '/instruction/sendSysInstruction'
 }
 
+interface Instruction {
+	instruction: {
+		params?: string
+	};
+	routingKey: string;
+}
+
 class Http {
 	OK: string;
 	constructor(status: string = '1000'){
@@ -58,7 +65,7 @@ class Http {
 			})
 	}
 
-	sendInstruction(data){
+	sendInstruction(data: Instruction){
 		return axios.post(ipInterface.sendSysInstruction, data)
 				.then(res => {
 					return Promise.resolve(res.data)

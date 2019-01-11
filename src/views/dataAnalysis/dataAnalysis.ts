@@ -3,13 +3,6 @@ import popup from '@/views/popupWindow/popupWindow.vue';
 import Http from '@/utils/http';
 import Storage from '@/utils/storage';
 
-interface Instruction {
-	instruction: {
-		params ?: number
-	};
-	routingKey: string;
-}
-
 @Component({
 	components: {
 		popup
@@ -34,7 +27,7 @@ export default class DataAnalysis extends Vue{
 			})
 	}
 	refresh(): void{
-		let _data : Instruction;
+		let _data = Object.create(null);
 
 		_data.instruction = this.data[0].subSystem[0].instruction;
 		_data.routingKey = this.data[0].subSystem[0].routingkey;
@@ -52,7 +45,7 @@ export default class DataAnalysis extends Vue{
 		this.personId = item.id;
 		this.showPopup = true;
 		
-		let _data : Instruction;
+		let _data = Object.create(null);
 
 		_data.instruction = this.data[1].subSystem[0].instruction;
 		_data.instruction.params = item.id;
@@ -93,7 +86,7 @@ export default class DataAnalysis extends Vue{
 	closePopup(){
 		this.showPopup = false;
 
-		let _data : Instruction;
+		let _data = Object.create(null);
 
 		_data.instruction = this.data[1].subSystem[1].instruction;
 		_data.instruction.params = this.personId;

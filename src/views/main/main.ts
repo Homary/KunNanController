@@ -3,13 +3,6 @@ import Http from '@/utils/http';
 import Storage from '@/utils/storage';
 //import wave from '@views/wave/wave.vue';
 
-interface Instruction {
-	instruction: {
-		params ?: number
-	};
-	routingKey: string;
-}
-
 @Component({
 	components: {
 		//wave
@@ -80,7 +73,7 @@ export default class Main extends Vue{
 
 	toggleSystem(name){
 		let _cur,
-			_data : Instruction;
+			_data = Object.create(null);
 
 		this.data.map(item => {
 			if(item.name === name){

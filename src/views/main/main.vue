@@ -19,16 +19,16 @@
 					@click="() => {active=init=false;toggleSystem('数据研判')}" 
 					:class="{'is-active': !active&&!init}">
 					<router-link to="data-analysis">
-						<img src="./img/数据研判图标.png" alt="" v-if="active || init">
-						<img src="./img/数据研判.png" alt="" v-else>
+						<img src="./img/data_analysis.png" alt="" v-if="active || init">
+						<img src="./img/data_analysis_active.png" alt="" v-else>
 						<h6>数据研判</h6>
 					</router-link>
 				</li>
 				<li class="nav-item" 
 					:class="{'is-active': active}" 
 					@click="() => {active=true; init=false; toggleSystem('运行态势')}">
-					<img src="./img/运行态势.png" alt="" v-if="!active">
-					<img src="./img/运行态势图标.png" alt="" v-else>
+					<img src="./img/run_status.png" alt="" v-if="!active">
+					<img src="./img/run_status_active.png" alt="" v-else>
 					<h6>运行态势</h6>
 				</li>
 			</ul>

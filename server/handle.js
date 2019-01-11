@@ -1,6 +1,7 @@
 const url = require('url');
 const querystring = require('querystring');
 const routes = require('./routes/routes');
+const staticFile = require('./routes/staticFile');
 
 function handle(req, cb) {
 	let data = '';
@@ -48,6 +49,8 @@ function routeHandle(req, res, params) {
 	if (routerItem) {
 console.info(`${routerItem} : ${JSON.stringify(params)}`);
         return routes.list[routerItem](res, pathname, params, req.method);
+    }else{
+    	return staticFile(res, pathname);
     }
 }
 

@@ -1,8 +1,5 @@
 class List{
-    '/'(res) {
-        res.end('hello');
-    }
-
+    
     '/user/checkLogin' (res, path, params, method){
         require('./handles/login')(res, path, params, method);
     }

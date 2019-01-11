@@ -14,6 +14,9 @@ console.log(`Server is running at localhost:${port}`);
 
 // 创建WebSocket服务
 let wss = new WebSocket({ server });
+let wss2 = new WebSocket( {
+	server: http.createServer().listen(9025)
+} );
 let total = 0;
 
 wss.on('connection', ws => {
@@ -26,12 +29,30 @@ wss.on('connection', ws => {
 	})
 })
 
+wss2.on('connection', ws => {
+	console.log(`new ws connection, total is ${total}`);
+})
+
 eventBus.on('get-instruction', (msg) => {
-	boradcast(msg)
+	let _msg = msg.instruction;
+
+	if(_msg.action === 'popup' || _msg.action === 'popup_off'){
+		let id  = _msg.params;
+
+		_msg.params = {
+			personid: id
+		}
+	}
+
+	boradcast(_msg);
 })
 
 function boradcast(msg) {
 	wss.clients.forEach( client => {
+		client.send(JSON.stringify(msg));
+	})
+
+	wss2.clients.forEach( client => {
 		client.send(JSON.stringify(msg));
 	})
 }

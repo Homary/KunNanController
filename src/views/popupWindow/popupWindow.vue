@@ -23,7 +23,7 @@
 					</div>
 					<div class="section-item-box">
 						<span class="grid-item-tag">证件号码</span>
-						<span>: {{Number(person_data.personCertNumber)}}</span>
+						<span>: {{person_data.personCertNumber}}</span>
 					</div>
 					<div class="section-item-box">
 						<span class="grid-item-tag">籍贯</span>

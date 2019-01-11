@@ -3,6 +3,13 @@ import popup from '@/views/popupWindow/popupWindow.vue';
 import Http from '@/utils/http';
 import Storage from '@/utils/storage';
 
+interface Instruction {
+	instruction: {
+		params ?: number
+	};
+	routingKey: string;
+}
+
 @Component({
 	components: {
 		popup
@@ -27,13 +34,10 @@ export default class DataAnalysis extends Vue{
 			})
 	}
 	refresh(): void{
-		let _data = {
-			instruction: {},
-			routingkey: ''
-		};
+		let _data : Instruction;
 
 		_data.instruction = this.data[0].subSystem[0].instruction;
-		_data.routingkey = this.data[0].subSystem[0].routingkey;
+		_data.routingKey = this.data[0].subSystem[0].routingkey;
 
 		Http.sendInstruction(_data)
 			.then( res => {
@@ -48,16 +52,11 @@ export default class DataAnalysis extends Vue{
 		this.personId = item.id;
 		this.showPopup = true;
 		
-		let _data = {
-			instruction: {
-				params: ''
-			},
-			routingkey: ''
-		};
+		let _data : Instruction;
 
 		_data.instruction = this.data[1].subSystem[0].instruction;
 		_data.instruction.params = item.id;
-		_data.routingkey = this.data[1].subSystem[0].routingkey;
+		_data.routingKey = this.data[1].subSystem[0].routingkey;
 
 		Http.sendInstruction(_data)
 			.then( res => {
@@ -94,16 +93,11 @@ export default class DataAnalysis extends Vue{
 	closePopup(){
 		this.showPopup = false;
 
-		let _data = {
-			instruction: {
-				params: -1
-			},
-			routingkey: ''
-		};
+		let _data : Instruction;
 
-		_data.instruction = this.data[1].subSystem[0].instruction;
+		_data.instruction = this.data[1].subSystem[1].instruction;
 		_data.instruction.params = this.personId;
-		_data.routingkey = this.data[1].subSystem[0].routingkey;
+		_data.routingKey = this.data[1].subSystem[1].routingkey;
 
 		Http.sendInstruction(_data)
 			.then( res => {

@@ -2,7 +2,7 @@ import {Vue, Component, Emit, Prop, Watch} from 'vue-property-decorator';
 import Http from '@/utils/http';
 
 interface DataObject {
-	personCert ?: string;
+	personCertNumber ?: string;
 }
 
 @Component
@@ -21,15 +21,15 @@ export default class PopupWindow extends Vue{
 
 		Http.getPersonWarnInfoById(id)
 			.then( data => {
-				this.person_data = data as DataObject;
-				this.person_data.personCert = this.hidePersonCert(this.person_data.personCert)
+				(data as DataObject).personCertNumber = this.hidepersonCertNumber((data as DataObject).personCertNumber);
+				this.person_data = (data as DataObject);
 			})
 	}
 
-	hidePersonCert(str: string) : string{
+	hidepersonCertNumber(str: string) : string{
 		let _str = str.split('');
 
-		_str.splice(8, 4, '****');
+		_str.splice(10, 4, '****');
 
 		return _str.join('');
 	}

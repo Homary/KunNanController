@@ -10,7 +10,7 @@
 				<span>admin</span>
 				<span class="date">{{date}} {{time}}</span>
 				<span><router-link to="/">退出</router-link></span>
-				<i class="icon-quit"></i>
+				<i class="icon-quit" @click="$router.push({path: '/'})"></i>
 			</div>
 		</header>
 		<nav class="nav">

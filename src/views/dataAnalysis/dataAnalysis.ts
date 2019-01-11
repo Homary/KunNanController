@@ -48,7 +48,7 @@ export default class DataAnalysis extends Vue{
 		let _data = Object.create(null);
 
 		_data.instruction = this.data[1].subSystem[0].instruction;
-		_data.instruction.params = item.id;
+		_data.instruction.params.personid = item.id;
 		_data.routingKey = this.data[1].subSystem[0].routingkey;
 
 		Http.sendInstruction(_data)
@@ -89,7 +89,7 @@ export default class DataAnalysis extends Vue{
 		let _data = Object.create(null);
 
 		_data.instruction = this.data[1].subSystem[1].instruction;
-		_data.instruction.params = this.personId;
+		_data.instruction.params.personid = this.personId;
 		_data.routingKey = this.data[1].subSystem[1].routingkey;
 
 		Http.sendInstruction(_data)

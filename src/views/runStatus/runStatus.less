@@ -1,0 +1,64 @@
+@import '~@/style/base';
+
+.wrapper{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	color: #FFF;
+	background-image: url('./img/bg.png');
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	.data-main{
+		width: 100%;
+		.header{
+			display: flex;
+			justify-content: space-between;
+			padding: 20px 15px 0;
+			.header-icon-common{
+				display: inline-block;
+				width: 25px;
+				height: 25px;
+				background-size: 100% 100%;
+				background-repeat: no-repeat;
+			}
+			.header-back{
+				.header-icon-common();
+				background-image: url('./img/back.png');
+			}
+			.header-refresh{
+				.header-icon-common();
+				background-image: url('./img/refresh.png');
+			}
+			.header-title{
+				font-size: 24px;
+				font-weight: bold;
+			}
+		}
+		.img-wrap{
+			position: absolute;
+			top: 25%;
+			left: 25%;
+			text-align: center;
+			h3{
+				margin-top: 30px;
+				font-weight: bold;
+				font-size: 150%;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	#section{
+		width: 60%;
+	}
+	#section-content{
+		height: 20em;
+	}
+}
+@media screen and (min-width: 1900px) {
+	#section-content{
+		height: 40em;
+		grid-template-rows: repeat(2, 220px);
+	}
+}

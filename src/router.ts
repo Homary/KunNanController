@@ -3,6 +3,7 @@ import VueRouter from 'vue-router';
 import Login from '@/views/login/login.vue';
 import Main from '@/views/main/main.vue';
 import DataAnalysis from '@/views/dataAnalysis/dataAnalysis.vue';
+import RunStatus from '@/views/runStatus/runStatus.vue';
 
 Vue.use(VueRouter);
 
@@ -24,6 +25,10 @@ export default new VueRouter({
 		{
 			path: '/data-analysis',
 			component: DataAnalysis
+		},
+		{
+			path: '/run-status',
+			component: RunStatus
 		}
 	]
 })

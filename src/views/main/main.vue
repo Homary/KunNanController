@@ -27,9 +27,11 @@
 				<li class="nav-item" 
 					:class="{'is-active': active}" 
 					@click="() => {active=true; init=false; toggleSystem('运行态势')}">
-					<img src="./img/run_status.png" alt="" v-if="!active">
-					<img src="./img/run_status_active.png" alt="" v-else>
-					<h6>运行态势</h6>
+					<router-link to="run-status">
+						<img src="./img/run_status.png" alt="" v-if="!active">
+						<img src="./img/run_status_active.png" alt="" v-else>
+						<h6>运行态势</h6>
+					</router-link>
 				</li>
 			</ul>
 		</nav>

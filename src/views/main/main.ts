@@ -12,6 +12,10 @@ import Storage from '@/utils/storage';
 			if("/data-analysis" === from.path){
 				vm.$data.init = false;
 			}
+
+			if("/run-status" === from.path){
+				vm.$data.active = true;
+			}
 		})
 	}
 })

@@ -1,5 +1,5 @@
 import {Vue, Component} from 'vue-property-decorator';
-import popup from '@/views/popupWindow/popupWindow.vue';
+import popup from '@/components/popupWindow/popupWindow.vue';
 import Http from '@/utils/http';
 import Storage from '@/utils/storage';
 
@@ -13,7 +13,7 @@ export default class DataAnalysis extends Vue{
 	dataArr: Array<object> = [];
 	showPopup: boolean = false;
 	personId: number = -1;
-	data: any = [];
+	data: any = []; 
 	TAG: string = "数据研判";
 
 	mounted(){

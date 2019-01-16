@@ -15,6 +15,14 @@ class List{
     '/instruction/sendSysInstruction' (res, path, params, method){
         require('./handles/instruction')(res, params, method);
     }
+
+    '/datajudge/getPersonWarnInfos' (res, path, params, method){
+        require('./handles/getPersonWarnInfos')(res);
+    }
+
+    '/datajudge/getPersonWarnInfoById' (res, path, params, method){
+        require('./handles/getPersonWarnInfoById')(res, params);
+    }
 }
 
 const routerAttrList = Object.getOwnPropertyNames(List.prototype);

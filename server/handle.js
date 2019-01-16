@@ -1,7 +1,8 @@
 const url = require('url');
+const path = require('path');
 const querystring = require('querystring');
 const routes = require('./routes/routes');
-const staticFile = require('./routes/staticFile');
+const send = require('send');
 
 function handle(req, cb) {
 	let data = '';
@@ -50,7 +51,8 @@ function routeHandle(req, res, params) {
 console.info(`${routerItem} : ${JSON.stringify(params)}`);
         return routes.list[routerItem](res, pathname, params, req.method);
     }else{
-    	return staticFile(res, pathname);
+    	send(req, url.parse(req.url, true).pathname, {root: path.resolve(__dirname, './www')})
+    		.pipe(res);
     }
 }
 

@@ -2,45 +2,36 @@
 昆南控制台
 
 #### 运行  
+
+- 开发模式  
+
+启动前端:`8090`端口
+
 ```
-// 开发模式
-npm install
-npm run dev
+ cd web  
+ npm install  
+ npm run dev
 ```  
+
+启动服务器  
+
 ```
-// 生产模式  
-npm run build
+ cd server
+ npm install 
+ npm run server [port]
+```
+
+- 生产模式
+
+```
+cd web && npm run build
 ```  
+前端文件打包之后会自动复制到`server/www` 
 
-> 启动服务器,默认端口为9090  
+启动服务器  
 
-```  
-npm run server [port]
+```
+cd server && npm run server [port] 
 ```
 
-#### 2018-12-24  
-- 脚本初始化  
-- 基础架构  
-
-#### 2018-12-25
-- `index.html`直接引入`server.config.js`配置文件,`copy-webpack-plugin`进行文件复制  
-
-#### 2018-12-26
-- `components`目录改名为`views`  
-- 组件结构改变,`vue`单文件拆分为`.vue`,`.ts`,`.less`  
-```
-├── img/
-├── *.less
-├── *.ts
-└── *.vue
-```
-- 移除`api`文件夹,负责`http`请求的函数统一封装到`static/js`下的`http.ts`里  
-
-#### 2019-01-03  
-- 调整目录结构  
-├── style/  样式  
-├── utils/  工具  
-├── views/  页面  
-
-#### 2019-01-09  
-- 添加`Node`后台  
+通过服务器访问文件

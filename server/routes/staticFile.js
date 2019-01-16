@@ -8,7 +8,7 @@ module.exports = async function (res, pathname) {
 	let data;
 
 	try{
-		data = await read(path.resolve(__dirname, `../build${_pathname}`));
+		data = await read(path.resolve(__dirname, `../www${_pathname}`));
 	}catch(e){
 		res.end('404');
 	}

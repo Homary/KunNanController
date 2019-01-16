@@ -3,7 +3,6 @@ const WebSocket = require('ws').Server;
 const eventBus = require('../utils').eventBus;
 const app = require('../app');
 
-// 端口为命令行输入,默认为9090
 let port = normalizePort(process.argv[process.argv.length - 1]);
 let server = http.createServer(app);
 

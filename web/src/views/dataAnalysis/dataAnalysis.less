@@ -64,7 +64,7 @@
 			.section-content{
 				display: grid;
 				grid-template-columns: repeat(3, 1fr);
-				grid-template-rows: repeat(2, 130px);
+				grid-auto-rows: rem(130);
 				grid-gap: 15px;
 				height: 280px;
 				padding: 20px;
@@ -114,20 +114,5 @@
 				}
 			}
 		}	
-	}
-}
-
-@media screen and (min-width: 1200px) {
-	#section{
-		width: 60%;
-	}
-	#section-content{
-		height: 20em;
-	}
-}
-@media screen and (min-width: 1900px) {
-	#section-content{
-		height: 40em;
-		grid-template-rows: repeat(2, 220px);
 	}
 }

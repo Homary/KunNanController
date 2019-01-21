@@ -50,7 +50,13 @@ let config = {
                         options: {
                             plugins: [ new LessFunc() ]
                         }
-                    }]
+                    }, {
+                        loader: 'style-resources-loader',
+                        options: {
+                            patterns: path.resolve(__dirname, './src/style/common.less')
+                        }
+                    }
+                    ]
                 })
             },
             {

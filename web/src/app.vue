@@ -1,4 +1,5 @@
 <template>
+
 <transition name="slide-fade">
 	<router-view class="router-view"></router-view>
 </transition>
@@ -18,9 +19,12 @@ export default class App extends Vue{
 html, body{
 	width: 100%;
 	height: 100%;
-	font-size: 16px;
+	font-size: 9.765vw;
 	font-family: "Microsoft YaHei";
 	overflow: hidden;
+	body{
+		font-size: 16px;
+	}
 	.router-view{
 		position: absolute;
 		top: 0;
@@ -31,10 +35,10 @@ html, body{
 	}
 }
 .slide-fade-enter-active {
-  transition: all 1.8s ease;
+  transition: all 2s ease;
 }
 .slide-fade-leave-active {
-  transition: all 1.8s;
+  transition: all 2s;
 }
 .slide-fade-enter, .slide-fade-leave-to
 /* .slide-fade-leave-active for below version 2.1.8 */ {

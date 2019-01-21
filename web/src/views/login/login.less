@@ -9,11 +9,11 @@
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	.login-main-wrapper{
-		flex: 0 0 40%;
+		flex: 0 0 rem(410);
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		height: 45%;
+		height: rem(345);
 		h3{
 			height: 30px;
 			margin-bottom: 30px;
@@ -27,14 +27,14 @@
 			flex-direction: column;
 			align-items: center;
 			.input-wrap{
-				width: 45%;
+				width: rem(185);
 				margin-bottom: 15px;
 				border-bottom: 1px solid #CCC;
 				.icon-common{
 					display: inline-block;
 					width: 20px;
 					height: 20px;
-					margin-right: 15px;
+					margin-right: 20px;
 					background-size: 100% 100%;
 					background-repeat: no-repeat;
 				}
@@ -47,7 +47,7 @@
 					background-image: url('./img/pwd.png');
 				}
 				input{
-					width: 80%;
+					width: calc(100% - 40px);
 					min-height: 30px;
 					color: #FFF;
 					background: transparent;
@@ -56,7 +56,7 @@
 				}
 			}
 			.btn{
-				width: 45%;
+				width: rem(185);
 				min-height: 30px;
 				border: 0;
 				border-radius: 5px;

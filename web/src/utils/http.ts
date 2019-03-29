@@ -22,6 +22,7 @@ class Http {
 		this.OK = status;
 	}
 
+
 	/**登陆
 	 * @param {psw: string}
 	 */
@@ -48,6 +49,8 @@ class Http {
 	}
 
 	sendInstruction(data: Instruction){
+		console.log('发送指令: ')
+		console.log(data)
 		return axios.post(ipInterface.sendSysInstruction, data)
 				.then(res => {
 					return Promise.resolve(res.data)

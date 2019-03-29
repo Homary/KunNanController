@@ -20,10 +20,10 @@ html, body{
 	width: 100%;
 	height: 100%;
 	font-size: 9.765vw;
-	font-family: "Microsoft YaHei";
+	font-family: "微软雅黑" !important;
 	overflow: hidden;
 	body{
-		font-size: 16px;
+		font-size: 10px;
 	}
 	.router-view{
 		position: absolute;
@@ -35,10 +35,10 @@ html, body{
 	}
 }
 .slide-fade-enter-active {
-  transition: all 2s ease;
+  transition: all 1s ease;
 }
 .slide-fade-leave-active {
-  transition: all 2s;
+  transition: all 1s;
 }
 .slide-fade-enter, .slide-fade-leave-to
 /* .slide-fade-leave-active for below version 2.1.8 */ {

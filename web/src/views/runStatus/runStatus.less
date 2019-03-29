@@ -1,64 +1,63 @@
 @import '~@/style/base';
 
-.wrapper{
-	position: relative;
-	width: 100%;
-	height: 100%;
+.data-main{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 40%;
+	height: 40vh;
 	color: #FFF;
-	background-image: url('./img/bg.png');
-	background-size: 100% 100%;
-	background-repeat: no-repeat;
-	.data-main{
+	border: 1px solid @btnBg;
+	transform: translate(-50%, -50%);
+	.rs-color{
+		font-size: 18px;
+		color: #2FAFE4;
+	}
+	.rs-header{
+		display: flex;
+		justify-content: space-between;
 		width: 100%;
-		.header{
-			display: flex;
-			justify-content: space-between;
-			padding: 20px 15px 0;
-			.header-icon-common{
-				display: inline-block;
-				width: 25px;
-				height: 25px;
-				background-size: 100% 100%;
-				background-repeat: no-repeat;
-			}
-			.header-back{
-				.header-icon-common();
-				background-image: url('./img/back.png');
-			}
-			.header-refresh{
-				.header-icon-common();
-				background-image: url('./img/refresh.png');
-			}
-			.header-title{
-				font-size: 24px;
-				font-weight: bold;
-			}
+		height: 40px;
+		margin-bottom: -2px;
+		padding: 0 10px;
+		line-height: 40px;
+		background: @dialogHeadBg;
+		box-sizing: border-box;
+		.header-back{
+			font-size: 28px;
 		}
-		.img-wrap{
-			position: absolute;
-			top: 25%;
-			left: 25%;
+	}
+	.rs-container{
+		width: 100%;
+		height: calc(100% - 30px);
+		padding: 30px 0 0 40px;
+		box-sizing: border-box;
+		background: @dialogBg;
+		.rs-list-item-wrapper{
+			margin-bottom: 40px;
+		}
+		.btn-common-size{
+			width: 60px;
+			height: 30px;
+			color: #FFF;
+			line-height: 30px;
 			text-align: center;
-			h3{
-				margin-top: 30px;
-				font-weight: bold;
-				font-size: 150%;
-			}
+			background: transparent;
+			border: 1px solid @btnBg;
+			border-radius: 5px;
+			font-family: '微软雅黑';
 		}
-	}
-}
-
-@media screen and (min-width: 1200px) {
-	#section{
-		width: 60%;
-	}
-	#section-content{
-		height: 20em;
-	}
-}
-@media screen and (min-width: 1900px) {
-	#section-content{
-		height: 40em;
-		grid-template-rows: repeat(2, 220px);
+		.btn--close{
+			.btn-common-size();
+			margin-left: 60px;
+		}
+		.btn--open{
+			.btn-common-size();
+			margin-left: 20px;
+		}
+		.btn--select{
+			color: #000;
+			background: @btnBg;
+		}
 	}
 }

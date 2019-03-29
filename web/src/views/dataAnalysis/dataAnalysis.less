@@ -1,118 +1,60 @@
 @import '~@/style/base';
 
-.wrapper{
-	position: relative;
-	width: 100%;
-	height: 100%;
+.data-main{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 40%;
+	height: 40vh;
 	color: #FFF;
-	background-image: url('./img/bg.png');
-	background-size: 100% 100%;
-	background-repeat: no-repeat;
-	.data-main{
+	border: 1px solid @btnBg;
+	transform: translate(-50%, -50%);
+	.da-color{
+		font-size: 18px;
+		color: #2FAFE4;
+	}
+	.da-header{
+		display: flex;
+		justify-content: space-between;
 		width: 100%;
-		.header{
-			display: flex;
-			justify-content: space-between;
-			padding: 20px 15px 0;
-			.header-icon-common{
-				display: inline-block;
-				width: 25px;
-				height: 25px;
-				background-size: 100% 100%;
-				background-repeat: no-repeat;
-			}
-			.header-back{
-				.header-icon-common();
-				background-image: url('./img/back.png');
-			}
-			.header-refresh{
-				.header-icon-common();
-				background-image: url('./img/refresh.png');
-			}
-			.header-title{
-				font-size: 24px;
-				font-weight: bold;
-			}
+		height: 40px;
+		margin-bottom: -2px;
+		padding: 0 10px;
+		line-height: 40px;
+		background: @dialogHeadBg;
+		box-sizing: border-box;
+		.header-back{
+			font-size: 28px;
 		}
-		.section{
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			width: 70%;
-			border: 1px solid @borderColor;
-			border-radius: 15px;
-			transform: translate(-50%, -50%);
-			.sub-header{
-				height: 40px;
-				line-height: 40px;
-				background: @topBgColor;
-				h6{
-					color: @titleColor;
-					font-size: 20px;
-					font-weight: bold;
-					text-indent: 25px;
-					.icon-sub-header{
-						display: inline-block;
-						width: 25px;
-						height: 25px;
-						background-image: url('./img/member.png');
-						background-size: 100% 100%;
-						transform: translateY(-5px);
-					}
-				}
-			}
-			.section-content{
-				display: grid;
-				grid-template-columns: repeat(3, 1fr);
-				grid-auto-rows: rem(130);
-				grid-gap: 15px;
-				height: 280px;
-				padding: 20px;
-				overflow-y: scroll;
-				&::-webkit-scrollbar {/*滚动条整体样式*/
-			        width: 10px;     /*高宽分别对应横竖滚动条的尺寸*/
-			        height: 1px;
-			    }
-				&::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
-			        border-radius: 10px;
-			         -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
-			        background: @borderColor;
-			    }
-				&::-webkit-scrollbar-track {/*滚动条里面轨道*/
-			        -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
-			        border-radius: 10px;
-			        background: transparent;
-			    }
-				.section-content-item{
-					display: flex;
-					flex-wrap: nowrap;
-					position: relative;
-					background: #FFF;
-					img{
-						width: 60%;
-						height: 100%;
-						margin-left: 5px;
-					}
-					.item-left{
-						margin: 10px 0 0 5px;
-						font-size: 14px;
-						color: #000;
-						li:nth-child(2n){
-							color: @titleColor;
-							margin: 5px 0 10px 0;
-						}
-					}
-					.item-center-title{
-						position: absolute;
-						top: 50%;
-						left: 50%;
-						font-size: 25px;
-						color: #EA372C;
-						font-weight: bold;
-						transform: translate(-50%, -50%);
-					}
-				}
-			}
-		}	
+	}
+	.da-container{
+		width: 100%;
+		height: calc(100% - 30px);
+		padding: 30px 0 0 40px;
+		box-sizing: border-box;
+		background: @dialogBg;
+		.btn-common-size{
+			width: 60px;
+			height: 30px;
+			color: #FFF;
+			line-height: 30px;
+			text-align: center;
+			background: transparent;
+			border: 1px solid @btnBg;
+			border-radius: 5px;
+			font-family: '微软雅黑';
+		}
+		.btn--close{
+			.btn-common-size();
+			margin-left: 80px;
+		}
+		.btn--open{
+			.btn-common-size();
+			margin-left: 20px;
+		}
+		.btn--select{
+			color: #000;
+			background: @btnBg;
+		}
 	}
 }

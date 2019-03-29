@@ -19,7 +19,7 @@ export default class DataAnalysis extends Vue {
 	readonly propMap = ['electricFence', 'bayonet', 'capture'];
 
 	get listDatas() {
-		return [{
+		return [ /*{
 			name: '电围采集分析',
 			state: this.electricFence,
 			instructions: {
@@ -46,7 +46,7 @@ export default class DataAnalysis extends Vue {
 					]
 				}
 			}
-		}, {
+		}, */ {
 			name: '卡口过车分析',
 			state: this.bayonet,
 			instructions: {

@@ -1,6 +1,5 @@
 import {Vue, Component} from 'vue-property-decorator';
 import Http from '@/utils/http';
-import Storage from '@/utils/storage';
 import { State, Mutation } from 'vuex-class'
 
 @Component
@@ -24,7 +23,7 @@ export default class DataAnalysis extends Vue{
 	};
 	readonly routingKey: string = 'GXX:VISION';
 
-	toggleCloudDefense(key) {
+	toggleCloudDefense(key: string) {
 		this.setState({key: 'dataAnalysis', subKey: 'cloudDefense'});
 		
 		let data = Object.create(null);

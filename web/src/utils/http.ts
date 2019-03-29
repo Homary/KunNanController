@@ -26,13 +26,13 @@ class Http {
 
 	getPersonWarnInfos(): Promise<object[]>{
 
-		return axios.get(ipInterface.personWarnInfos)
+		return axios.get(_server.data_ip + ':' + _server.data_port + ipInterface.personWarnInfos)
 			.then(res => {
 				return Promise.resolve(res.data);
 			})
 	}
 	getPersonWarnInfoById(id: number): Promise<object[]>{
-		return axios.get(ipInterface.getPersonWarnInfoById, {
+		return axios.get(_server.data_ip + ':' + _server.data_port + ipInterface.getPersonWarnInfoById, {
 			params: {
 				id
 			}
@@ -67,6 +67,8 @@ class Http {
 	}
 
 	sendInstruction(data: Instruction){
+		console.log('发送指令: ')
+		console.log(data)
 		return axios.post(ipInterface.sendSysInstruction, data)
 				.then(res => {
 					return Promise.resolve(res.data)

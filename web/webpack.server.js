@@ -5,7 +5,6 @@ module.exports = {
     port: 8090,
     inline: true,
     disableHostCheck: true,
-    historyApiFallback: env === 'production' ? false : true,
     index: 'index.html',
     host: '0.0.0.0',// 允许外部访问
     proxy: [{
@@ -15,7 +14,6 @@ module.exports = {
 	        '/instruction/*',
             '/datajudge/*'
 	    ],
-	    //target: 'http://192.168.31.99:9020'
-        target: 'http://192.168.31.10:9090'
+        target: 'http://192.168.25.172:8090'
 	}]
 }

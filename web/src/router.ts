@@ -20,15 +20,17 @@ export default new VueRouter({
 		},
 		{
 			path: '/main',
-			component: Main
-		},
-		{
-			path: '/data-analysis',
-			component: DataAnalysis
-		},
-		{
-			path: '/run-status',
-			component: RunStatus
+			component: Main,
+			children: [
+				{
+					path: 'data-analysis',
+					component: DataAnalysis
+				},
+				{
+					path: 'run-status',
+					component: RunStatus
+				}
+			]
 		}
 	]
 })

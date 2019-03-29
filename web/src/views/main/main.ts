@@ -25,6 +25,7 @@ export default class Main extends Vue{
 	active: boolean = false;
 	init: boolean = true; // 初始选择
 	data: any = [];
+	dataAnalysis: boolean = false;
 
 	get date(){
         let date = new Date(),

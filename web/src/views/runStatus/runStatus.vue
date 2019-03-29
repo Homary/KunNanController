@@ -9,11 +9,11 @@
 			<div class="rs-list-item-wrapper" v-for="(item, index) of listDatas">			
 				<span class="rs-color">{{ item.name }}</span>
 				<button class="btn--close" 
-					@click = "()=>{ item.state = false; toggleTimeRange(index, 'hour', 'day') }"
+					@click = "()=>{ toggleTimeRange(index, 'hour', 'day') }"
 					:class="{'btn--select': !item.state}"
 				>一小时</button>
 				<button class="btn--open" 
-					@click = "()=>{ item.state = true; toggleTimeRange(index, 'day', 'hour') }"
+					@click = "()=>{ toggleTimeRange(index, 'day', 'hour') }"
 					:class="{'btn--select': item.state}"
 				>全天</button>
 			</div>

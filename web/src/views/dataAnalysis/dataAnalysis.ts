@@ -1,11 +1,17 @@
 import {Vue, Component} from 'vue-property-decorator';
 import Http from '@/utils/http';
 import Storage from '@/utils/storage';
+import { State, Mutation } from 'vuex-class'
 
-@Component({
-})
+@Component
 export default class DataAnalysis extends Vue{
-	btnState: boolean = false;
+	@State( state => state.dataAnalysis.cloudDefense ) stateCloudDefense;
+	@Mutation('setState') setState;
+
+	get btnState() {
+		return this.stateCloudDefense
+	}
+
 	readonly Instructions = {
 		open: {
 			action: 'invoke_HPM',
@@ -19,6 +25,8 @@ export default class DataAnalysis extends Vue{
 	readonly routingKey: string = 'GXX:VISION';
 
 	toggleCloudDefense(key) {
+		this.setState({key: 'dataAnalysis', subKey: 'cloudDefense'});
+		
 		let data = Object.create(null);
 
 		Object.defineProperties(data, {

@@ -3,8 +3,6 @@ import axios from 'axios';
 let _server = server;
 
 let ipInterface = {
-	personWarnInfos: '/datajudge/getPersonWarnInfos',
-	getPersonWarnInfoById: '/datajudge/getPersonWarnInfoById',
 	login:'/user/checkLogin', // 登录接口
 	quit:'/user/loginOut', //退出登录
 	systemList: '/system/getSysList',
@@ -22,23 +20,6 @@ class Http {
 	OK: string;
 	constructor(status: string = '1000'){
 		this.OK = status;
-	}
-
-	getPersonWarnInfos(): Promise<object[]>{
-
-		return axios.get(ipInterface.personWarnInfos)
-			.then(res => {
-				return Promise.resolve(res.data);
-			})
-	}
-	getPersonWarnInfoById(id: number): Promise<object[]>{
-		return axios.get(ipInterface.getPersonWarnInfoById, {
-			params: {
-				id
-			}
-		}).then(res => {
-			return Promise.resolve(res.data);
-		})
 	}
 
 	/**登陆

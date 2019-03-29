@@ -35,6 +35,7 @@ let config = {
             {
                 test: /\.less$/,
                 use: ExtractTextPlugin.extract({
+                    publicPath: '../',
                     fallback: 'style-loader',
                     use: ['css-loader', {
                         loader: 'postcss-loader',
@@ -73,7 +74,7 @@ let config = {
                     options: {
                         name: '[name].[ext]',
                         outputPath: './img',  // 运行在服务器时发布路径
-                        publicPath: './img'  // 打包后CSS文件相对路径
+                        // publicPath: './img'  // 打包后CSS文件相对路径
                     }
                 }]
             }
@@ -102,7 +103,7 @@ let config = {
             }
         }),
         Autoprefixer,
-        new ExtractTextPlugin('[name].css'),
+        new ExtractTextPlugin('css/[name].css'),
         new VueLoaderPlugin(),
         new CopyWebpackPlugin([{
             from: path.resolve(__dirname, SERVER_PATH),

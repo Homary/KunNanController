@@ -19,11 +19,6 @@ export default class PopupWindow extends Vue{
 	_getPersonWarnInfoById(id: number): void{
 		if(id === -1) return;
 
-		Http.getPersonWarnInfoById(id)
-			.then( data => {
-				(data as DataObject).personCertNumber = this.hidepersonCertNumber((data as DataObject).personCertNumber);
-				this.person_data = (data as DataObject);
-			})
 	}
 
 	hidepersonCertNumber(str: string) : string{

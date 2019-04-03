@@ -1,75 +1,106 @@
-.main-box{
-	color: #FFF;
-	letter-spacing: 1px;
-	background-image: url('./img/bg.png');
-	background-size: 100% 100%;
-	background-repeat: no-repeat;
-	.main{
-		width: 100%;
-		height: 100%;
-		position: relative;
-		.header{
-			display: flex;
-			justify-content: space-between;
-			padding-top: 30px;
-			margin: 0 15px 0px;
-			font-size: 18px;
-			.header-left{
-				height: 30px;
-				line-height: 30px;
-				font-weight: bold;
-			}
-			.header-right{
-				height: 30px;
-				line-height: 30px;
-				span{
-					height: 100%;
-					margin: 0 8px;
-					line-height: 18px;
-					vertical-align: middle;
-				}
-				.icon-quit{
-					display: inline-block;
-					width: 17px;
-					height: 17px;
-					margin-left: -8px;
-					background-image: url('./img/quit.png');
-					background-size: 100% 100%;
-					vertical-align: text-bottom;
-				}
-			}
-		}
-		.nav{
-			position: absolute;
-			top: 50%;
-			width: 100%;
-			transform: translateY(-70%);
-			.nav-box{
-				display: flex;
-				justify-content: space-between;
-				.nav-item{
-					padding: 30px;
-					text-align: center;
-					&:nth-child(1){
-						margin-left: 25%;
-					}
-					&:nth-child(2){
-						margin-right: 25%;
-					}
-					img{
-						width: 158px;
-						height: 162px;
-					}
-					h6{
-						margin-top: 30px;
-					}
-				}
-			}
-		}
-	}
+.main-box {
+    color: #fff;
+    letter-spacing: 1px;
+    background-image: url('./img/bg.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    .main {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        .header {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 30px;
+            margin: 0 15px 0px;
+            font-size: 18px;
+            .header-left {
+                height: 30px;
+                line-height: 30px;
+                font-weight: bold;
+            }
+            .header-right {
+                height: 30px;
+                line-height: 30px;
+                span {
+                    height: 100%;
+                    margin: 0 8px;
+                    line-height: 18px;
+                    vertical-align: middle;
+                }
+                .icon-quit {
+                    display: inline-block;
+                    width: 17px;
+                    height: 17px;
+                    margin-left: -8px;
+                    background-image: url('./img/quit.png');
+                    background-size: 100% 100%;
+                    vertical-align: text-bottom;
+                }
+            }
+        }
+        .nav {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            transform: translateY(-70%);
+            .nav-box {
+                display: flex;
+                justify-content: space-between;
+                .nav-item {
+                    padding: 30px;
+                    text-align: center;
+                    &:nth-child(1) {
+                        margin-left: 10%;
+                    }
+                    &:nth-child(3) {
+                        margin-right: 10%;
+                    }
+                    img {
+                        width: 158px;
+                        height: 162px;
+                    }
+                    h6 {
+                        margin-top: 30px;
+                        font-size: 18px;
+                    }
+                    .btns {
+                        margin-top: 40px;
+                        .btn-common-size {
+                            width: 70px;
+                            height: 40px;
+                            color: #fff;
+                            line-height: 30px;
+                            text-align: center;
+                            background: transparent;
+                            border: 1px solid @btnBg;
+                            border-radius: 5px;
+                            font-size: 16px;
+                            font-family: '微软雅黑';
+                        }
+                        .btn--close {
+                            .btn-common-size();
+                            margin-right: 10px;
+                            background: #000C17;
+                        }
+                        .btn--open {
+                            .btn-common-size();
+                            color: #000;
+                            margin-left: 10px;
+                            background: #45E0FC;
+                        }
+                        .btn--select {
+                            color: #000;
+                            background: @btnBg;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
-.is-active{
-	background: rgba(128, 128, 128, .3);
-	border-radius: 10px;
+.is-active {
+    background: rgba(128, 128, 128, 0.3);
+    border-radius: 10px;
 }

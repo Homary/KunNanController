@@ -23,8 +23,8 @@ export default new VueRouter({
 			component: Main,
 			children: [
 				{
-					path: 'data-analysis',
-					component: DataAnalysis
+                    path: 'data-analysis',
+                    component: DataAnalysis
 				},
 				{
 					path: 'run-status',

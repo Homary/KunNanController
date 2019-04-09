@@ -105,6 +105,8 @@ export default class Main extends Vue {
             }
         });
 
+        if(_cur === undefined) return;
+
         _data.instruction = _cur.instruction;
         _data.routingKey = _cur.routingkey;
 

@@ -267,88 +267,6 @@ body .router-view {
   background: transparent;
   background-color: #EEE;
 }
-.data-main[data-v-55a77b45] {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 40%;
-  height: 40vh;
-  color: #FFF;
-  border: 1px solid #30B0E5;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-.data-main .da-color[data-v-55a77b45] {
-  font-size: 18px;
-  color: #2FAFE4;
-}
-.data-main .da-header[data-v-55a77b45] {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 100%;
-  height: 40px;
-  margin-bottom: -2px;
-  padding: 0 10px;
-  line-height: 40px;
-  background: #002E45;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-.data-main .da-header .header-back[data-v-55a77b45] {
-  font-size: 28px;
-}
-.data-main .da-container[data-v-55a77b45] {
-  width: 100%;
-  height: calc(100% - 30px);
-  padding: 30px 0 0 40px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  background: #000C17;
-}
-.data-main .da-container .btn-common-size[data-v-55a77b45] {
-  width: 60px;
-  height: 30px;
-  color: #FFF;
-  line-height: 30px;
-  text-align: center;
-  background: transparent;
-  border: 1px solid #30B0E5;
-  border-radius: 5px;
-  font-family: '微软雅黑';
-}
-.data-main .da-container .btn--close[data-v-55a77b45] {
-  width: 60px;
-  height: 30px;
-  color: #FFF;
-  line-height: 30px;
-  text-align: center;
-  background: transparent;
-  border: 1px solid #30B0E5;
-  border-radius: 5px;
-  font-family: '微软雅黑';
-  margin-left: 80px;
-}
-.data-main .da-container .btn--open[data-v-55a77b45] {
-  width: 60px;
-  height: 30px;
-  color: #FFF;
-  line-height: 30px;
-  text-align: center;
-  background: transparent;
-  border: 1px solid #30B0E5;
-  border-radius: 5px;
-  font-family: '微软雅黑';
-  margin-left: 20px;
-}
-.data-main .da-container .btn--select[data-v-55a77b45] {
-  color: #000;
-  background: #30B0E5;
-}
 .main-box {
   color: #fff;
   letter-spacing: 1px;
@@ -481,6 +399,88 @@ body .router-view {
 .is-active {
   background: rgba(128, 128, 128, 0.3);
   border-radius: 10px;
+}
+.data-main[data-v-55a77b45] {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 40%;
+  height: 40vh;
+  color: #FFF;
+  border: 1px solid #30B0E5;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.data-main .da-color[data-v-55a77b45] {
+  font-size: 18px;
+  color: #2FAFE4;
+}
+.data-main .da-header[data-v-55a77b45] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  height: 40px;
+  margin-bottom: -2px;
+  padding: 0 10px;
+  line-height: 40px;
+  background: #002E45;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.data-main .da-header .header-back[data-v-55a77b45] {
+  font-size: 28px;
+}
+.data-main .da-container[data-v-55a77b45] {
+  width: 100%;
+  height: calc(100% - 30px);
+  padding: 30px 0 0 40px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #000C17;
+}
+.data-main .da-container .btn-common-size[data-v-55a77b45] {
+  width: 60px;
+  height: 30px;
+  color: #FFF;
+  line-height: 30px;
+  text-align: center;
+  background: transparent;
+  border: 1px solid #30B0E5;
+  border-radius: 5px;
+  font-family: '微软雅黑';
+}
+.data-main .da-container .btn--close[data-v-55a77b45] {
+  width: 60px;
+  height: 30px;
+  color: #FFF;
+  line-height: 30px;
+  text-align: center;
+  background: transparent;
+  border: 1px solid #30B0E5;
+  border-radius: 5px;
+  font-family: '微软雅黑';
+  margin-left: 80px;
+}
+.data-main .da-container .btn--open[data-v-55a77b45] {
+  width: 60px;
+  height: 30px;
+  color: #FFF;
+  line-height: 30px;
+  text-align: center;
+  background: transparent;
+  border: 1px solid #30B0E5;
+  border-radius: 5px;
+  font-family: '微软雅黑';
+  margin-left: 20px;
+}
+.data-main .da-container .btn--select[data-v-55a77b45] {
+  color: #000;
+  background: #30B0E5;
 }
 .data-main[data-v-ee25a4fe] {
   position: absolute;

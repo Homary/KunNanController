@@ -24,7 +24,7 @@
 	"devDependencies": {
 		"@types/node": "^10.12.18",
 		"autoprefixer": "^9.4.3",
-		"axios": "^0.18.0",
+		"axios": "^0.21.1",
 		"copy-webpack-plugin": "^4.6.0",
 		"css-loader": "^2.0.2",
 		"extract-text-webpack-plugin": "^4.0.0-beta.0",
